@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+{{>Header}}
+
+<body>
+
+  {{>Navbar}}
+    
+    <main id="site-main">
+
+        
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-image" class="border-shadow">
+                    <span class="btn btn-primary">Add Images  <i class="fas fa-plus"></i></span></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="container my-5">
+        <div class="row">
+
+
+
+
+           {{#each images}}
+
+         
+
+            <div class="col-md-4  my-3">
+
+                <div class="card d-flex h=justify-content-between" style="width: 18rem;">
+                    <a ><img class="card-img-top" src="uploads/images/{{this.Image}}" alt="Card image cap"></a>
+                    <div class="card-body">
+                        
+                        <h5 class="card-title">{{this.Imagename}}</h5>
+                        <a href="detail?id={{this._id}}" class="btn btn-primary">Read More</a>
+                        
+                    </div>
+                    
+                </div>
+
+            
+
+
+
+            </div>
+            {{/each}}
+             
+
+
+        </div>
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
