@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const DB = "mongodb+srv://Ayush:ayushjain@cluster0.8wcst.mongodb.net/Images?retryWrites=true&w=majority"
-mongoose.connect(DB,
+
+mongoose.connect(process.env.DB,
 { useNewUrlParser: true,
 useUnifiedTopology: true,
 
